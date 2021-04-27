@@ -8,7 +8,7 @@ pipeline {
                         label "windows"
                     }
                     steps {
-                        bat "run-tests.bat"
+                        bat "dir"
                     }
                     post {
                         always {
@@ -21,7 +21,7 @@ pipeline {
                         label "linux"
                     }
                     steps {
-                        sh "run-tests.sh"
+                        sh "ls -lrt"
                     }
                     post {
                         always {
