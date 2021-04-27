@@ -10,11 +10,6 @@ pipeline {
                     steps {
                         bat "dir"
                     }
-                    post {
-                        always {
-                            junit "**/TEST-*.xml"
-                        }
-                    }
                 }
                 stage('Test On Linux') {
                     agent {
@@ -23,11 +18,7 @@ pipeline {
                     steps {
                         sh "ls -lrt"
                     }
-                    post {
-                        always {
-                            junit "**/TEST-*.xml"
-                        }
-                    }
+                   }
                 }
             }
         }
